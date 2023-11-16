@@ -1,5 +1,6 @@
-﻿namespace Course.Shared.Dtos;
-
-public class NoContentDto
+﻿namespace Course.Shared.Dtos
 {
+    public class NoContentDto
+    {
+    }
 }
