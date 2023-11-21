@@ -1,15 +1,16 @@
 ﻿using Course.Shared.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Course.Shared.ControllerBases;
-
-public class CustomBaseController : ControllerBase
+namespace Course.Shared.ControllerBases
 {
-    public IActionResult CreateActionResultInstance<T>(Response<T> response)
+    public class CustomBaseController : ControllerBase
     {
-        return new ObjectResult(response)
+        public IActionResult CreateActionResultInstance<T>(Response<T> response)
         {
-            StatusCode = response.StatusCode
-        };
+            return new ObjectResult(response)
+            {
+                StatusCode = response.StatusCode
+            };
+        }
     }
 }
