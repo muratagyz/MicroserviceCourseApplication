@@ -68,7 +68,7 @@ public class DiscountService : IDiscountService
         return Response<Models.Discount>.Success(discount, 200);
     }
 
-    public async Task<Response<List<Models.Discount>>> GetList()
+    public async Task<Response<List<Models.Discount>>> GetAll()
     {
         var discounts = await _dbConnection.QueryAsync<Models.Discount>("Select * from discount");
 
